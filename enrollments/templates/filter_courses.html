@@ -1,0 +1,21 @@
+<!-- filtered_courses.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Courses</title>
+</head>
+<body>
+    <h1>Filtered Courses</h1>
+    <ul id="course-list">
+        {% for course in courses %}
+            <li>
+                <strong>{{ course.title }}</strong> - Category: {{ course.category }} - Duration: {{ course.duration }} weeks
+            </li>
+        {% empty %}
+            <li>No courses found matching your criteria.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
